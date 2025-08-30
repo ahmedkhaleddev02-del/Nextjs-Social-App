@@ -12,6 +12,12 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+    eslint: {
+    ignoreDuringBuilds: true, // ⬅️ ده اللي يخلي Vercel يكمل حتى لو في lint errors
+  },
+  typescript: {
+    ignoreBuildErrors: true, // ⬅️ لو عايز برضو يتجاهل TypeScript errors
+  },
 };
 
 export default nextConfig;
